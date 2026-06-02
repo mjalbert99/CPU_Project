@@ -2,5 +2,5 @@ max fanout
 
 Pin                                   Limit Fanout  Slack
 ---------------------------------------------------------
-resetn                                    4    422   -418 (VIOLATED)
+resetn                                    4    424   -420 (VIOLATED)
 

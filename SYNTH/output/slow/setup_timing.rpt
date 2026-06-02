@@ -1,5 +1,5 @@
 Startpoint: resetn (input port clocked by clk)
-Endpoint: _41266_ (recovery check against rising-edge clock clk)
+Endpoint: _39641_ (recovery check against rising-edge clock clk)
 Path Group: asynchronous
 Path Type: max
 
@@ -8,15 +8,15 @@ Fanout     Cap    Slew   Delay    Time   Description
                   0.00    0.00    0.00   clock clk (rise edge)
                           0.00    0.00   clock network delay (ideal)
                           4.00    4.00 ^ input external delay
-   422    1.45    0.50    0.00    4.00 ^ resetn (in)
-                  0.50    0.00    4.00 ^ _41266_/RESET_B (sky130_fd_sc_hdll__dfrtp_1)
+   424    1.46    0.50    0.00    4.00 ^ resetn (in)
+                  0.50    0.00    4.00 ^ _39641_/RESET_B (sky130_fd_sc_hdll__dfrtp_1)
                                   4.00   data arrival time
 
                   0.00   20.00   20.00   clock clk (rise edge)
                           0.00   20.00   clock network delay (ideal)
                          -0.40   19.60   clock uncertainty
                           0.00   19.60   clock reconvergence pessimism
-                                 19.60 ^ _41266_/CLK (sky130_fd_sc_hdll__dfrtp_1)
+                                 19.60 ^ _39641_/CLK (sky130_fd_sc_hdll__dfrtp_1)
                           0.37   19.97   library recovery time
                                  19.97   data required time
 -----------------------------------------------------------------------------
@@ -26,8 +26,8 @@ Fanout     Cap    Slew   Delay    Time   Description
                                  15.97   slack (MET)
 
 
-Startpoint: _41557_ (rising edge-triggered flip-flop clocked by clk)
-Endpoint: _41274_ (rising edge-triggered flip-flop clocked by clk)
+Startpoint: _39641_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _40058_ (rising edge-triggered flip-flop clocked by clk)
 Path Group: clk
 Path Type: max
 
@@ -35,70 +35,74 @@ Fanout     Cap    Slew   Delay    Time   Description
 -----------------------------------------------------------------------------
                   0.00    0.00    0.00   clock clk (rise edge)
                           0.00    0.00   clock network delay (ideal)
-                  0.00    0.00    0.00 ^ _41557_/CLK (sky130_fd_sc_hdll__dfrtp_1)
-     3    0.05    1.14    1.27    1.27 ^ _41557_/Q (sky130_fd_sc_hdll__dfrtp_1)
-                  1.14    0.00    1.27 ^ _19728_/B (sky130_fd_sc_hdll__nand2_1)
-     2    0.00    0.22    0.34    1.61 v _19728_/Y (sky130_fd_sc_hdll__nand2_1)
-                  0.22    0.00    1.61 v _19729_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.21    1.28    2.89 v _19729_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.21    0.00    2.89 v _19856_/A (sky130_fd_sc_hdll__or3_1)
-     2    0.00    0.22    1.03    3.92 v _19856_/X (sky130_fd_sc_hdll__or3_1)
-                  0.22    0.00    3.92 v _19857_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.22    1.29    5.21 v _19857_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.22    0.00    5.21 v _19860_/A1 (sky130_fd_sc_hdll__o21ai_1)
-     2    0.00    0.39    0.37    5.58 ^ _19860_/Y (sky130_fd_sc_hdll__o21ai_1)
-                  0.39    0.00    5.58 ^ _19862_/A3 (sky130_fd_sc_hdll__a31oi_1)
-     3    0.01    0.27    0.32    5.90 v _19862_/Y (sky130_fd_sc_hdll__a31oi_1)
-                  0.27    0.00    5.90 v _19863_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.19    1.28    7.18 v _19863_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.19    0.00    7.18 v _19864_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.19    1.25    8.43 v _19864_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.19    0.00    8.43 v _19865_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.20    1.25    9.68 v _19865_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.20    0.00    9.68 v _20294_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.21    1.26   10.94 v _20294_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.21    0.00   10.94 v _20295_/A1 (sky130_fd_sc_hdll__mux2_1)
-     4    0.01    0.26    0.88   11.82 v _20295_/X (sky130_fd_sc_hdll__mux2_1)
-                  0.26    0.00   11.82 v _20326_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.19    1.27   13.10 v _20326_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.19    0.00   13.10 v _20327_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.20    1.25   14.35 v _20327_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.20    0.00   14.35 v _20328_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
-     4    0.01    0.22    1.28   15.62 v _20328_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
-                  0.22    0.00   15.62 v _20353_/B (sky130_fd_sc_hdll__nand3_1)
-     1    0.00    0.15    0.20   15.82 ^ _20353_/Y (sky130_fd_sc_hdll__nand3_1)
-                  0.15    0.00   15.82 ^ _20354_/B1 (sky130_fd_sc_hdll__o31ai_1)
-     2    0.00    0.18    0.17   15.99 v _20354_/Y (sky130_fd_sc_hdll__o31ai_1)
-                  0.18    0.00   15.99 v _20355_/B (sky130_fd_sc_hdll__nand2_1)
-     1    0.00    0.11    0.15   16.14 ^ _20355_/Y (sky130_fd_sc_hdll__nand2_1)
-                  0.11    0.00   16.14 ^ _20367_/A (sky130_fd_sc_hdll__nand2_1)
-     2    0.00    0.13    0.13   16.26 v _20367_/Y (sky130_fd_sc_hdll__nand2_1)
-                  0.13    0.00   16.26 v _20368_/B (sky130_fd_sc_hdll__nand2_1)
-     1    0.00    0.11    0.13   16.39 ^ _20368_/Y (sky130_fd_sc_hdll__nand2_1)
-                  0.11    0.00   16.39 ^ _20369_/B (sky130_fd_sc_hdll__nand2_1)
-     2    0.00    0.13    0.14   16.52 v _20369_/Y (sky130_fd_sc_hdll__nand2_1)
-                  0.13    0.00   16.52 v _20525_/A2 (sky130_fd_sc_hdll__a211oi_1)
-     1    0.00    0.51    0.50   17.03 ^ _20525_/Y (sky130_fd_sc_hdll__a211oi_1)
-                  0.51    0.00   17.03 ^ _20626_/B1 (sky130_fd_sc_hdll__o211ai_1)
-     1    0.00    0.21    0.34   17.37 v _20626_/Y (sky130_fd_sc_hdll__o211ai_1)
-                  0.21    0.00   17.37 v _20760_/B1 (sky130_fd_sc_hdll__a211oi_1)
-     2    0.01    0.70    0.60   17.97 ^ _20760_/Y (sky130_fd_sc_hdll__a211oi_1)
-                  0.70    0.00   17.97 ^ _31339_/B2 (sky130_fd_sc_hdll__o22ai_1)
-     1    0.00    0.18    0.27   18.24 v _31339_/Y (sky130_fd_sc_hdll__o22ai_1)
-                  0.18    0.00   18.24 v _41274_/D (sky130_fd_sc_hdll__dfrtp_1)
-                                 18.24   data arrival time
+                  0.00    0.00    0.00 ^ _39641_/CLK (sky130_fd_sc_hdll__dfrtp_1)
+     3    0.01    0.15    0.81    0.81 v _39641_/Q (sky130_fd_sc_hdll__dfrtp_1)
+                  0.15    0.00    0.81 v _18882_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.19    1.22    2.04 v _18882_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.19    0.00    2.04 v _18883_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.20    1.25    3.29 v _18883_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.20    0.00    3.29 v _18901_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.19    1.25    4.54 v _18901_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.19    0.00    4.54 v _18944_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.20    1.25    5.79 v _18944_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.20    0.00    5.79 v _18945_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.22    1.28    7.07 v _18945_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.22    0.00    7.07 v _19064_/B (sky130_fd_sc_hdll__nand2_1)
+     1    0.00    0.11    0.16    7.23 ^ _19064_/Y (sky130_fd_sc_hdll__nand2_1)
+                  0.11    0.00    7.23 ^ _19065_/B1 (sky130_fd_sc_hdll__o21ai_1)
+     2    0.01    0.19    0.16    7.39 v _19065_/Y (sky130_fd_sc_hdll__o21ai_1)
+                  0.19    0.00    7.39 v _19614_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.20    1.25    8.64 v _19614_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.20    0.00    8.64 v _19615_/SLEEP (sky130_fd_sc_hdll__inputiso1p_1)
+     4    0.01    0.19    0.65    9.29 v _19615_/X (sky130_fd_sc_hdll__inputiso1p_1)
+                  0.19    0.00    9.29 v _19621_/B (sky130_fd_sc_hdll__nor4_1)
+     1    0.00    0.59    0.57    9.86 ^ _19621_/Y (sky130_fd_sc_hdll__nor4_1)
+                  0.59    0.00    9.86 ^ _19622_/B (sky130_fd_sc_hdll__nand2_1)
+     3    0.01    0.20    0.29   10.14 v _19622_/Y (sky130_fd_sc_hdll__nand2_1)
+                  0.20    0.00   10.14 v _19709_/A1 (sky130_fd_sc_hdll__mux2i_1)
+     2    0.00    0.40    0.31   10.45 ^ _19709_/Y (sky130_fd_sc_hdll__mux2i_1)
+                  0.40    0.00   10.45 ^ _19710_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.24    1.22   11.67 ^ _19710_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.24    0.00   11.67 ^ _19711_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.24    1.18   12.85 ^ _19711_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.24    0.00   12.85 ^ _19712_/A (sky130_fd_sc_hdll__dlygate4sd3_1)
+     4    0.01    0.27    1.20   14.04 ^ _19712_/X (sky130_fd_sc_hdll__dlygate4sd3_1)
+                  0.27    0.00   14.04 ^ _19716_/A2 (sky130_fd_sc_hdll__a21oi_1)
+     2    0.00    0.14    0.19   14.23 v _19716_/Y (sky130_fd_sc_hdll__a21oi_1)
+                  0.14    0.00   14.23 v _19830_/A1 (sky130_fd_sc_hdll__mux2_1)
+     2    0.00    0.19    0.80   15.03 v _19830_/X (sky130_fd_sc_hdll__mux2_1)
+                  0.19    0.00   15.03 v _19832_/A0 (sky130_fd_sc_hdll__mux2_1)
+     2    0.00    0.21    0.78   15.82 v _19832_/X (sky130_fd_sc_hdll__mux2_1)
+                  0.21    0.00   15.82 v _20146_/A2 (sky130_fd_sc_hdll__o21ai_1)
+     1    0.00    0.27    0.27   16.09 ^ _20146_/Y (sky130_fd_sc_hdll__o21ai_1)
+                  0.27    0.00   16.09 ^ _20147_/B (sky130_fd_sc_hdll__nand2_1)
+     1    0.00    0.11    0.15   16.24 v _20147_/Y (sky130_fd_sc_hdll__nand2_1)
+                  0.11    0.00   16.24 v _20148_/A3 (sky130_fd_sc_hdll__a31o_1)
+     1    0.00    0.09    0.46   16.70 v _20148_/X (sky130_fd_sc_hdll__a31o_1)
+                  0.09    0.00   16.70 v _20180_/A (sky130_fd_sc_hdll__nand2_1)
+     1    0.00    0.11    0.10   16.80 ^ _20180_/Y (sky130_fd_sc_hdll__nand2_1)
+                  0.11    0.00   16.80 ^ _20181_/B1 (sky130_fd_sc_hdll__a31oi_1)
+     1    0.00    0.16    0.07   16.88 v _20181_/Y (sky130_fd_sc_hdll__a31oi_1)
+                  0.16    0.00   16.88 v _20182_/B (sky130_fd_sc_hdll__nor2_1)
+     2    0.00    0.32    0.26   17.14 ^ _20182_/Y (sky130_fd_sc_hdll__nor2_1)
+                  0.32    0.00   17.14 ^ _20183_/B (sky130_fd_sc_hdll__nand2_1)
+     1    0.00    0.11    0.17   17.30 v _20183_/Y (sky130_fd_sc_hdll__nand2_1)
+                  0.11    0.00   17.30 v _20184_/C1 (sky130_fd_sc_hdll__o211ai_1)
+     1    0.00    0.34    0.14   17.44 ^ _20184_/Y (sky130_fd_sc_hdll__o211ai_1)
+                  0.34    0.00   17.44 ^ _40058_/D (sky130_fd_sc_hdll__dfrtp_1)
+                                 17.44   data arrival time
 
                   0.00   20.00   20.00   clock clk (rise edge)
                           0.00   20.00   clock network delay (ideal)
                          -0.40   19.60   clock uncertainty
                           0.00   19.60   clock reconvergence pessimism
-                                 19.60 ^ _41274_/CLK (sky130_fd_sc_hdll__dfrtp_1)
-                         -0.37   19.23   library setup time
-                                 19.23   data required time
+                                 19.60 ^ _40058_/CLK (sky130_fd_sc_hdll__dfrtp_1)
+                         -0.25   19.35   library setup time
+                                 19.35   data required time
 -----------------------------------------------------------------------------
-                                 19.23   data required time
-                                -18.24   data arrival time
+                                 19.35   data required time
+                                -17.44   data arrival time
 -----------------------------------------------------------------------------
-                                  0.99   slack (MET)
+                                  1.92   slack (MET)
 
 
