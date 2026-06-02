@@ -1,0 +1,82 @@
+
+26. Printing statistics.
+
+=== cpu_top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    24230        - wires
+    24245        - wire bits
+     4506        - public wires
+     4521        - public wire bits
+        5        - ports
+       20        - port bits
+    24242 3.02E+05 cells
+        1   11.261   sky130_fd_sc_hdll__a211o_2
+       98  735.706   sky130_fd_sc_hdll__a211oi_1
+        1   11.261   sky130_fd_sc_hdll__a21bo_2
+        8   70.067   sky130_fd_sc_hdll__a21boi_1
+       43  376.611   sky130_fd_sc_hdll__a21o_1
+      200   1251.2   sky130_fd_sc_hdll__a21oi_1
+       45  450.432   sky130_fd_sc_hdll__a221oi_1
+      166 1.87E+03   sky130_fd_sc_hdll__a222oi_1
+       50   500.48   sky130_fd_sc_hdll__a22o_1
+      146 1.28E+03   sky130_fd_sc_hdll__a22oi_1
+        3   30.029   sky130_fd_sc_hdll__a2bb2oi_1
+       48  420.403   sky130_fd_sc_hdll__a31o_1
+      197 1.48E+03   sky130_fd_sc_hdll__a31oi_1
+       14  157.651   sky130_fd_sc_hdll__a32o_1
+       42  367.853   sky130_fd_sc_hdll__a32oi_1
+       21  210.202   sky130_fd_sc_hdll__and2b_2
+       12   90.086   sky130_fd_sc_hdll__and3_1
+        8   80.077   sky130_fd_sc_hdll__and4_2
+        1   12.512   sky130_fd_sc_hdll__and4b_2
+        1    5.005   sky130_fd_sc_hdll__buf_1
+        2   12.512   sky130_fd_sc_hdll__buf_2
+       90  1.8E+03   sky130_fd_sc_hdll__bufbuf_8
+       77 1.45E+03   sky130_fd_sc_hdll__bufinv_8
+      103  515.494   sky130_fd_sc_hdll__clkbuf_1
+       41  359.094   sky130_fd_sc_hdll__clkbuf_4
+     4518 1.19E+05   sky130_fd_sc_hdll__dfrtp_1
+        2   17.517   sky130_fd_sc_hdll__dlygate4sd1_1
+     6094  6.1E+04   sky130_fd_sc_hdll__dlygate4sd3_1
+       31  193.936   sky130_fd_sc_hdll__inputiso0n_1
+       64  560.538   sky130_fd_sc_hdll__inputiso0p_1
+      184 1.15E+03   sky130_fd_sc_hdll__inputiso1p_1
+     3834  4.8E+04   sky130_fd_sc_hdll__mux2_1
+      994 1.12E+04   sky130_fd_sc_hdll__mux2i_1
+     1547 7.74E+03   sky130_fd_sc_hdll__nand2_1
+      111  694.416   sky130_fd_sc_hdll__nand3_1
+       10   75.072   sky130_fd_sc_hdll__nand3b_1
+       86  645.619   sky130_fd_sc_hdll__nand4_1
+        9   78.826   sky130_fd_sc_hdll__nand4b_1
+      751 3.76E+03   sky130_fd_sc_hdll__nor2_1
+       63  394.128   sky130_fd_sc_hdll__nor3_1
+        9   67.565   sky130_fd_sc_hdll__nor3b_1
+       30  225.216   sky130_fd_sc_hdll__nor4_1
+        5   56.304   sky130_fd_sc_hdll__o211a_2
+     1758 1.32E+04   sky130_fd_sc_hdll__o211ai_1
+        9   90.086   sky130_fd_sc_hdll__o21a_2
+     1168 7.31E+03   sky130_fd_sc_hdll__o21ai_1
+        2   20.019   sky130_fd_sc_hdll__o21ba_1
+        3   26.275   sky130_fd_sc_hdll__o21bai_1
+       10   125.12   sky130_fd_sc_hdll__o221a_2
+       60  600.576   sky130_fd_sc_hdll__o221ai_1
+        2   22.522   sky130_fd_sc_hdll__o22a_2
+      365 2.74E+03   sky130_fd_sc_hdll__o22ai_1
+       57  570.547   sky130_fd_sc_hdll__o2bb2ai_1
+       45  337.824   sky130_fd_sc_hdll__o31ai_1
+       23  201.443   sky130_fd_sc_hdll__o32ai_1
+      626 5.48E+03   sky130_fd_sc_hdll__or2b_1
+        7    52.55   sky130_fd_sc_hdll__or3_1
+        2   20.019   sky130_fd_sc_hdll__or4_2
+        2   25.024   sky130_fd_sc_hdll__or4bb_1
+      255 2.55E+03   sky130_fd_sc_hdll__xnor2_1
+        8  230.221   sky130_fd_sc_hdll__xnor3_4
+       79  790.758   sky130_fd_sc_hdll__xor2_1
+        1   28.778   sky130_fd_sc_hdll__xor3_4
+
+   Chip area for module '\cpu_top': 302498.870400
+     of which used for sequential elements: 118711.353600 (39.24%)
+
