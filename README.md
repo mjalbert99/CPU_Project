@@ -148,8 +148,8 @@ Synthesis is driven by a custom automation script (`run_synth.tcl`) that structu
 ### Synthesis Optimization Strategy
 1. **Elaboration & Flattening:** The structural design reads all sub-modules and compiles around the `cpu_top` root module, tracking pipeline hierarchy boundaries before flattening (`synth -flatten -booth`) and extracting Booth-encoded arithmetic multipliers.
 2. **Sequential Mapping:** Register primitives are explicitly bound to technology-mapped sequential cells via `dfflibmap`.
-3. **Advanced ABC Technology Mapping:** Logic optimization is pushed through the **ABC synthesis engine** using a customized script recipe (`constraints/abc_settings`) targeting an execution delay parameter of **15.6ns ($15600\text{ ps}$)**. The compilation flow enforces:
-    * **Structural & Functional Reduction:** Utilizes AIG-based rewriting, choice-history synthesis, and register retiming routines (`strash`, `&fraig`, `&dch`, `dretime`, `retime -o -D 15600`) to minimize logic depth.
+3. **Advanced ABC Technology Mapping:** Logic optimization is pushed through the **ABC synthesis engine** using a customized script recipe (`constraints/abc_settings`) targeting an execution delay parameter of **10.0ns ($10000\text{ ps}$)**. The compilation flow enforces:
+    * **Structural & Functional Reduction:** Utilizes AIG-based rewriting, choice-history synthesis, and register retiming routines (`strash`, `&fraig`, `&dch`, `dretime`, `retime -o -D 10000`) to minimize logic depth.
     * **Technology Mapping & Buffering:** Binds random logic explicitly to the SKY130 liberty cells while incorporating timing-driven gate insertion and cell sizing (`&nf`, `buffer`, `upsize`, `dnsize`, `buffer -N 4`).
     * **Wire Load & Driver Modeling (`constraints/constr.abc`):** Constrains input paths assuming a standard `sky130_fd_sc_hdll__inv_4` driving cell and bounds all output ports to a capacitive load of **0.05pF**.
 4. **Clean & Purge:** Inserts tie-high and tie-low constants (`sky130_fd_sc_hdll__conb_1 HI LO`), splits multi-bit net buses to clean up layout wire structures, and outputs corner-specific gate-level netlists (`cpu_top_corner_netlist.v`) alongside design area summaries.
@@ -161,12 +161,12 @@ To sign off on timing before moving to physical layout (Place & Route), **OpenST
 ### Design Constraints (SDC) Configuration
 The core timing margins, clock topologies, and environmental design rules are established explicitly within `constraints/cpu_top.sdc`:
 
-* **Clock Network Definition:** Defines a primary synchronous clock (`clk`) targeting a **20ns period**.
+* **Clock Network Definition:** Defines a primary synchronous clock (`clk`) targeting a **10ns period**.
 * **Timing Margins & Jitter:** Accounts for clock network non-idealities by modeling a **0.3ns setup uncertainty** and a **0.05ns hold uncertainty**.
 * **Boundary Delays:** Enforces boundary constraints with **4.0ns maximum / 0.0ns minimum** input and output external propagation delay windows on all peripheral ports relative to the clock edge.
 * **Design Rule Checks (DRC):**
-    * **Max Fan-out:** Constrained to a maximum limit of **8** loads per net to control capacitive propagation delays.
-    * **Max Slew / Transition:** Bounded to **1.0ns** across the entire design, with input transitions restricted to a maximum of **0.5ns**.
+    * **Max Fan-out:** Constrained to a maximum limit of **5** loads per net to control capacitive propagation delays.
+    * **Max Slew / Transition:** Bounded to **1.2ns** across the entire design, with input transitions restricted to a maximum of **0.5ns**.
     * **Max Capacitance:** Hard-limited to a maximum threshold of **0.05pF** on all outputs.
 * **Timing Derating (Pessimism):** Implements variation buffers with global derating coefficients set to **1.03 for late paths** (setup risk) and **0.97 for early paths** (hold risk) across both cells and nets.
 
@@ -248,7 +248,7 @@ Once the routed design abstract is finalized in OpenROAD (`output/cpu_top_routed
 
 ### 4. High Slew & Setup Failures on Long Branching Reset Paths (`resetn`)
 * **Problem:** Initial physical implementation maps exhibited severe setup timing and max-slew violations on the active-low global reset line (`resetn`). Because the reset signal roots out across every single pipeline register across all 5 stages, the long branching wire length introduced high RC parasitics, degraded signal transitions, and created a highly unstable reset tree structure that caused the most headaches during routing.
-* **Solution:** Tightened the clock tree characterization script during the CTS synthesis pass to handle the heavy load profile directly using `configure_cts_characterization -max_slew 1.50 -max_cap 0.40`. Additionally, an explicit maximum transition boundary constraint was asserted directly on the port (`set_max_transition 0.4 [get_ports resetn]`), minimizing the load capacitance on the line and forcing OpenROAD to size up driving structures to keep transitions clean.
+* **Solution:** Tightened the clock tree characterization script during the CTS synthesis pass to handle the heavy load profile directly using `configure_cts_characterization -max_slew 0.8 -max_cap 0.40`. Additionally, an explicit maximum transition boundary constraint was asserted directly on the port (`set_max_transition 0.4 [get_ports resetn]`), minimizing the load capacitance on the line and forcing OpenROAD to size up driving structures to keep transitions clean.
 
 ### 5. Pushing Layout Scaling Limits From 15ns Down to a 10ns Cycle Window
 * **Problem:** Squeezing the design layout to close timing at an aggressive 10ns clock cycle target made interconnect wire delay the primary limiting factor, as the physical distance between standard cells introduced excessive propagation latency.
