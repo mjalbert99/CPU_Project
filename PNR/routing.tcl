@@ -1,8 +1,7 @@
-add_global_connection -net VDD -pin_pattern {one_} -power
 
 global_route
 
-detailed_route
+detailed_route -output_drc reports/5_route_drc.rpt
 
 repair_timing
 check_antennas

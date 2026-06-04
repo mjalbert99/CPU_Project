@@ -3,9 +3,9 @@ set WORKING_DIR "../RTL/"
 set SDC_FILE "${WORKING_DIR}/constraints/cpu_top.sdc"
 
 set corners [list \
-    "slow" "/root/Work/vlsi/pdks/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ss_100C_1v60.lib" \
-    "typ"  "/root/Work/vlsi/pdks/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__tt_025C_1v80.lib" \
-    "fast" "/root/Work/vlsi/pdks/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ff_n40C_1v95.lib" \
+    "slow" "/root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ss_100C_1v60.lib" \
+    "typ"  "/root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__tt_025C_1v80.lib" \
+    "fast" "/root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ff_n40C_1v95.lib" \
 ]
 
 foreach {corner_name lib_file} $corners {

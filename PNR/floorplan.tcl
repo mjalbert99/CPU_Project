@@ -2,19 +2,14 @@ set TOP "cpu_top"
 set SYNTH_DIR "../SYNTH"
 set SDC_PATH "../RTL/constraints/cpu_top.sdc"
 
-set PDK_ROOT "/root/Work/vlsi/pdks/open_pdks/sky130/sky130B"
-set TECH_LEF  "${PDK_ROOT}/libs.ref/sky130_fd_sc_hdll/techlef/sky130_fd_sc_hdll__max.tlef"
-set CELL_LEF_DIR "${PDK_ROOT}/libs.ref/sky130_fd_sc_hdll/lef"
-set LIB_FILE  "${PDK_ROOT}/libs.ref/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ss_100C_1v60.lib"
+set PDK_ROOT "/root/Work/vlsi/pdks/pdk/sky130B/libs.ref"
+set TECH_LEF  "${PDK_ROOT}/sky130_fd_sc_hdll/techlef/sky130_fd_sc_hdll__max.tlef"
+set CELL_LEF "${PDK_ROOT}/sky130_fd_sc_hdll/lef/sky130_fd_sc_hdll.lef"
+set LIB_FILE  "${PDK_ROOT}/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ss_100C_1v60.lib"
 
 # --- Read LEFs ---
 read_lef $TECH_LEF
-
-set lef_files [glob -nocomplain ${CELL_LEF_DIR}/*.lef]
-
-foreach lef_file $lef_files {
-    read_lef $lef_file
-}
+read_lef $CELL_LEF
 
 read_liberty $LIB_FILE
 
@@ -25,7 +20,8 @@ read_sdc $SDC_PATH
 
 file mkdir output
 
-initialize_floorplan -utilization 30 \
+
+initialize_floorplan -utilization 75 \
                      -aspect_ratio 1.0 \
                      -core_space 20.0 \
                      -site unithd
@@ -36,12 +32,12 @@ set_io_pin_constraint -pin_names cpu_result -region right:*
 set_io_pin_constraint -pin_names clk -region left:*
 
 place_pins -hor_layers met3 -ver_layers met2 \
-            -min_distance 25 \
+            -min_distance 15 \
             -exclude top:* \
             -exclude bottom:* \
             -group_pins {clk resetn en_cpu} \
             -group_pins {cpu_result valid_wb} \
-            -corner_avoidance 100
+            -corner_avoidance 50
 
 insert_tiecells "sky130_fd_sc_hdll__conb_1/HI" -prefix "TIE_HIGH_"
 insert_tiecells "sky130_fd_sc_hdll__conb_1/LO" -prefix "TIE_LOW_"         
@@ -52,7 +48,7 @@ place_endcaps
 add_global_connection -net VDD -pin_pattern {^VDD$} -power
 add_global_connection -net VSS -pin_pattern {^VSS$} -ground
 
-add_global_connection -net VDD -pin_pattern {^one_$} -power
+# add_global_connection -net VDD -pin_pattern {^one_$} -power
 
 set_voltage_domain -power VDD -ground VSS
 

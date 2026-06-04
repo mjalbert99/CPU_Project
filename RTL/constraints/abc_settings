@@ -5,16 +5,24 @@ strash
 scorr
 dc2
 dretime
-retime -o -D 15600
+retime -o 
+
+# Timing-driven logic restructuring
 strash
 &get -n
 &dch -f
-&nf -D 15600
+&nf
 &put
-buffer
-upsize -D 15600
-dnsize -D 15600
-stime -p
 
+# Delay-targeted mapping (Forces delay focus using your 10.0ns period)
+map -D 10.0 -A 0.0 -B 1.0
+
+# Paced buffering and structural gate sizing
+buffer -N 5
+upsize
+dnsize
+
+# Final gate sizing pass with physical footprint context
 topo
-buffer -N 4
+upsize
+dnsize

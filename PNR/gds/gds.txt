@@ -1,0 +1,799 @@
+
+Magic 8.3 revision 652 - Compiled on Wed Jun  3 15:53:19 PDT 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=10240]
+Using NULL graphics device.
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Loading "magic_gds.tcl" from command line.
+"rescue" isn't a valid gds option.
+GDS commands have the form ":gds option", where option is one of:
+    help		print this help information
+    abstract [allow|disallow]
+		[dis]allow writing of GDS with calls to abstract cells
+    addendum [yes|no]	output only cells that are not type "readonly"
+    arrays [yes|no]	output arrays as individual subuses (like in CIF)
+    compress [value]	compress output with zlib compression 0 to 6
+    contacts [yes|no]	optimize output by arraying contacts as subcells
+    datestamp [yes|value]	use current time or value as the creation date stamp
+    drccheck [yes|no]	mark all cells as needing DRC checking
+    flatten [yes|no|limit]	flatten simple cells (e.g., contacts) on input
+    flatglob [<name>|none]	flatten cells by name with glob patterning
+    labels [yes|no]	cause labels to be output when writing GDS-II
+    library [yes|no]	do not output the top level, only subcells
+    lower [yes|no]		allow both upper and lower case in labels
+    magscale [value]	scale to interpret text magnification 1 in microns
+    maskhints [yes|no]	generate mask hint properties on input
+    merge [yes|no]		merge tiles into polygons in the output
+    nodatestamp [yes|no]	write a zero value creation date stamp
+    noduplicates [yes|no]	do not read cells that exist before reading GDS
+    ordering [on|off]	cause cells to be read in post-order
+    read file		read Calma GDS-II format from "file"
+		into edit cell
+    readonly [yes|no]	set cell as read-only and generate output from GDS file
+    rescale [yes|no]	allow or disallow internal grid subdivision
+    savepaths [yes|no]	save path centerlines as cell properties
+    warning [option]	set warning information level
+    write file		output Calma GDS-II format to "file"
+		for the window's root cell
+    polygon subcells [yes|no]
+		put non-Manhattan polygons into subcells
+    path subcells [yes|no]
+		put wire paths into individual subcells
+    undefined [allow|disallow]
+		[dis]allow writing of GDS with calls to undefined cells
+    unique [yes|no]	rename any cells with names duplicated in the GDS
+If no option is given, a CALMA GDS-II stream file is
+    produced for the root cell.
+The current CIF output style ("cif ostyle") is used
+    to select the mask layers output by :gds write.
+The current CIF input style ("cif istyle") is used
+    to select the mask layers read by :gds read.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: sky130_fd_sc_hdll
+Reading "sky130_fd_sc_hdll__a21o_8".
+CIF file read warning: Input off lambda grid by 1/2; grid redefined.
+Reading "sky130_fd_sc_hdll__a21o_6".
+Reading "sky130_fd_sc_hdll__a211o_2".
+Reading "sky130_fd_sc_hdll__a211o_1".
+Reading "sky130_fd_sc_hdll__tapvpwrvgnd_1".
+Reading "sky130_fd_sc_hdll__and2_6".
+Reading "sky130_fd_sc_hdll__a211o_4".
+Reading "sky130_fd_sc_hdll__a211oi_1".
+Reading "sky130_fd_sc_hdll__and2_8".
+Reading "sky130_fd_sc_hdll__a211oi_2".
+Reading "sky130_fd_sc_hdll__clkbuf_6".
+Reading "sky130_fd_sc_hdll__clkbuf_12".
+Reading "sky130_fd_sc_hdll__a211oi_4".
+Reading "sky130_fd_sc_hdll__a21bo_1".
+Reading "sky130_fd_sc_hdll__a21bo_2".
+Reading "sky130_fd_sc_hdll__a21bo_4".
+Reading "sky130_fd_sc_hdll__a21boi_1".
+Reading "sky130_fd_sc_hdll__clkinv_12".
+Reading "sky130_fd_sc_hdll__mux2_12".
+Reading "sky130_fd_sc_hdll__a21boi_4".
+Reading "sky130_fd_sc_hdll__a21boi_2".
+Reading "sky130_fd_sc_hdll__a21o_2".
+Reading "sky130_fd_sc_hdll__a21o_1".
+Reading "sky130_fd_sc_hdll__mux2_16".
+Reading "sky130_fd_sc_hdll__a21o_4".
+Reading "sky130_fd_sc_hdll__a21oi_2".
+Reading "sky130_fd_sc_hdll__a21oi_1".
+Reading "sky130_fd_sc_hdll__nand2_6".
+Reading "sky130_fd_sc_hdll__a21oi_4".
+Reading "sky130_fd_sc_hdll__a221oi_1".
+Reading "sky130_fd_sc_hdll__a221oi_2".
+Reading "sky130_fd_sc_hdll__nand2_12".
+Reading "sky130_fd_sc_hdll__a221oi_4".
+Reading "sky130_fd_sc_hdll__a222oi_1".
+Reading "sky130_fd_sc_hdll__a22o_1".
+Reading "sky130_fd_sc_hdll__nand2_16".
+Reading "sky130_fd_sc_hdll__a22o_2".
+Reading "sky130_fd_sc_hdll__a22oi_1".
+Reading "sky130_fd_sc_hdll__a22o_4".
+Reading "sky130_fd_sc_hdll__nor4_8".
+Reading "sky130_fd_sc_hdll__nor4_6".
+Reading "sky130_fd_sc_hdll__a22oi_2".
+Reading "sky130_fd_sc_hdll__a22oi_4".
+Reading "sky130_fd_sc_hdll__probe_p_8".
+Reading "sky130_fd_sc_hdll__a2bb2o_1".
+Reading "sky130_fd_sc_hdll__tapvgnd_1".
+Reading "sky130_fd_sc_hdll__tapvgnd2_1".
+Reading "sky130_fd_sc_hdll__a2bb2o_2".
+Reading "sky130_fd_sc_hdll__a2bb2o_4".
+Reading "sky130_fd_sc_hdll__or2_6".
+Reading "sky130_fd_sc_hdll__or2_8".
+Reading "sky130_fd_sc_hdll__a2bb2oi_1".
+Reading "sky130_fd_sc_hdll__a2bb2oi_2".
+Reading "sky130_fd_sc_hdll__probec_p_8".
+Reading "sky130_fd_sc_hdll__a2bb2oi_4".
+Reading "sky130_fd_sc_hdll__dlrtn_1".
+Reading "sky130_fd_sc_hdll__dlrtp_1".
+Reading "sky130_fd_sc_hdll__a31o_1".
+Reading "sky130_fd_sc_hdll__a31o_2".
+Reading "sky130_fd_sc_hdll__dlrtn_2".
+Reading "sky130_fd_sc_hdll__a31o_4".
+Reading "sky130_fd_sc_hdll__dlrtp_2".
+Reading "sky130_fd_sc_hdll__dlrtn_4".
+Reading "sky130_fd_sc_hdll__a31oi_1".
+Reading "sky130_fd_sc_hdll__a31oi_2".
+Reading "sky130_fd_sc_hdll__a31oi_4".
+Reading "sky130_fd_sc_hdll__dlrtp_4".
+Reading "sky130_fd_sc_hdll__a32o_1".
+Reading "sky130_fd_sc_hdll__a32o_2".
+Reading "sky130_fd_sc_hdll__diode_2".
+Reading "sky130_fd_sc_hdll__diode_4".
+Reading "sky130_fd_sc_hdll__diode_6".
+Reading "sky130_fd_sc_hdll__diode_8".
+Reading "sky130_fd_sc_hdll__a32o_4".
+Reading "sky130_fd_sc_hdll__a32oi_1".
+Reading "sky130_fd_sc_hdll__a32oi_2".
+Reading "sky130_fd_sc_hdll__a32oi_4".
+Reading "sky130_fd_sc_hdll__and2_1".
+Reading "sky130_fd_sc_hdll__and2_2".
+Reading "sky130_fd_sc_hdll__and2_4".
+Reading "sky130_fd_sc_hdll__and2b_1".
+Reading "sky130_fd_sc_hdll__and2b_2".
+Reading "sky130_fd_sc_hdll__and2b_4".
+Reading "sky130_fd_sc_hdll__and3_1".
+Reading "sky130_fd_sc_hdll__and3_2".
+Reading "sky130_fd_sc_hdll__and3_4".
+Reading "sky130_fd_sc_hdll__and3b_1".
+Reading "sky130_fd_sc_hdll__and3b_2".
+Reading "sky130_fd_sc_hdll__and3b_4".
+Reading "sky130_fd_sc_hdll__and4_1".
+Reading "sky130_fd_sc_hdll__and4_2".
+Reading "sky130_fd_sc_hdll__and4_4".
+Reading "sky130_fd_sc_hdll__and4b_1".
+Reading "sky130_fd_sc_hdll__and4b_2".
+Reading "sky130_fd_sc_hdll__and4b_4".
+Reading "sky130_fd_sc_hdll__and4bb_1".
+Reading "sky130_fd_sc_hdll__and4bb_2".
+Reading "sky130_fd_sc_hdll__and4bb_4".
+Reading "sky130_fd_sc_hdll__buf_1".
+Reading "sky130_fd_sc_hdll__buf_12".
+Reading "sky130_fd_sc_hdll__buf_16".
+Reading "sky130_fd_sc_hdll__buf_2".
+Reading "sky130_fd_sc_hdll__buf_4".
+Reading "sky130_fd_sc_hdll__buf_6".
+Reading "sky130_fd_sc_hdll__buf_8".
+Reading "sky130_fd_sc_hdll__bufbuf_16".
+Reading "sky130_fd_sc_hdll__bufbuf_8".
+Reading "sky130_fd_sc_hdll__bufinv_16".
+Reading "sky130_fd_sc_hdll__bufinv_8".
+Reading "sky130_fd_sc_hdll__clkbuf_1".
+Reading "sky130_fd_sc_hdll__clkbuf_16".
+Reading "sky130_fd_sc_hdll__clkbuf_2".
+Reading "sky130_fd_sc_hdll__clkbuf_4".
+Reading "sky130_fd_sc_hdll__clkbuf_8".
+Reading "sky130_fd_sc_hdll__clkinv_1".
+Reading "sky130_fd_sc_hdll__clkinv_16".
+Reading "sky130_fd_sc_hdll__clkinv_2".
+Reading "sky130_fd_sc_hdll__clkinv_4".
+Reading "sky130_fd_sc_hdll__clkinv_8".
+Reading "sky130_fd_sc_hdll__clkinvlp_2".
+Reading "sky130_fd_sc_hdll__clkinvlp_4".
+Reading "sky130_fd_sc_hdll__conb_1".
+Reading "sky130_fd_sc_hdll__dfrtp_1".
+Reading "sky130_fd_sc_hdll__dfrtp_2".
+Reading "sky130_fd_sc_hdll__dfrtp_4".
+Reading "sky130_fd_sc_hdll__dfstp_1".
+Reading "sky130_fd_sc_hdll__dfstp_2".
+Reading "sky130_fd_sc_hdll__dfstp_4".
+Reading "sky130_fd_sc_hdll__dlxtn_1".
+Reading "sky130_fd_sc_hdll__dlxtn_2".
+Reading "sky130_fd_sc_hdll__dlxtn_4".
+Reading "sky130_fd_sc_hdll__dlygate4sd1_1".
+Reading "sky130_fd_sc_hdll__ebufn_1".
+Reading "sky130_fd_sc_hdll__dlygate4sd2_1".
+Reading "sky130_fd_sc_hdll__dlygate4sd3_1".
+Reading "sky130_fd_sc_hdll__ebufn_2".
+Reading "sky130_fd_sc_hdll__ebufn_4".
+Reading "sky130_fd_sc_hdll__ebufn_8".
+Reading "sky130_fd_sc_hdll__einvn_1".
+Reading "sky130_fd_sc_hdll__einvn_2".
+Reading "sky130_fd_sc_hdll__einvn_4".
+Reading "sky130_fd_sc_hdll__einvn_8".
+Reading "sky130_fd_sc_hdll__einvp_1".
+Reading "sky130_fd_sc_hdll__einvp_2".
+Reading "sky130_fd_sc_hdll__einvp_4".
+Reading "sky130_fd_sc_hdll__einvp_8".
+Reading "sky130_fd_sc_hdll__inv_1".
+Reading "sky130_fd_sc_hdll__inv_12".
+Reading "sky130_fd_sc_hdll__inv_16".
+Reading "sky130_fd_sc_hdll__inv_2".
+Reading "sky130_fd_sc_hdll__inv_4".
+Reading "sky130_fd_sc_hdll__inv_6".
+Reading "sky130_fd_sc_hdll__inv_8".
+Reading "sky130_fd_sc_hdll__mux2_1".
+Reading "sky130_fd_sc_hdll__mux2_2".
+Reading "sky130_fd_sc_hdll__mux2_4".
+Reading "sky130_fd_sc_hdll__mux2_8".
+Reading "sky130_fd_sc_hdll__mux2i_1".
+Reading "sky130_fd_sc_hdll__mux2i_2".
+Reading "sky130_fd_sc_hdll__mux2i_4".
+Reading "sky130_fd_sc_hdll__nand2_1".
+Reading "sky130_fd_sc_hdll__nand2_2".
+Reading "sky130_fd_sc_hdll__nand2_4".
+Reading "sky130_fd_sc_hdll__nand2_8".
+Reading "sky130_fd_sc_hdll__nand2b_1".
+Reading "sky130_fd_sc_hdll__nand2b_2".
+Reading "sky130_fd_sc_hdll__nand2b_4".
+Reading "sky130_fd_sc_hdll__nand3_1".
+Reading "sky130_fd_sc_hdll__nand3_2".
+Reading "sky130_fd_sc_hdll__nand3_4".
+Reading "sky130_fd_sc_hdll__nand3b_1".
+Reading "sky130_fd_sc_hdll__nand3b_2".
+Reading "sky130_fd_sc_hdll__nand3b_4".
+Reading "sky130_fd_sc_hdll__nand4_1".
+Reading "sky130_fd_sc_hdll__nand4_2".
+Reading "sky130_fd_sc_hdll__nand4_4".
+Reading "sky130_fd_sc_hdll__nand4b_1".
+Reading "sky130_fd_sc_hdll__nand4b_2".
+Reading "sky130_fd_sc_hdll__nand4b_4".
+Reading "sky130_fd_sc_hdll__nand4bb_1".
+Reading "sky130_fd_sc_hdll__nand4bb_2".
+Reading "sky130_fd_sc_hdll__nand4bb_4".
+Reading "sky130_fd_sc_hdll__nor2_1".
+Reading "sky130_fd_sc_hdll__nor2_2".
+Reading "sky130_fd_sc_hdll__nor2_4".
+Reading "sky130_fd_sc_hdll__nor2_8".
+Reading "sky130_fd_sc_hdll__nor2b_1".
+Reading "sky130_fd_sc_hdll__nor2b_2".
+Reading "sky130_fd_sc_hdll__nor2b_4".
+Reading "sky130_fd_sc_hdll__nor3_1".
+Reading "sky130_fd_sc_hdll__nor3_2".
+Reading "sky130_fd_sc_hdll__nor3_4".
+Reading "sky130_fd_sc_hdll__nor3b_1".
+Reading "sky130_fd_sc_hdll__nor3b_2".
+Reading "sky130_fd_sc_hdll__nor3b_4".
+Reading "sky130_fd_sc_hdll__nor4_1".
+Reading "sky130_fd_sc_hdll__nor4_2".
+Reading "sky130_fd_sc_hdll__nor4_4".
+Reading "sky130_fd_sc_hdll__nor4b_1".
+Reading "sky130_fd_sc_hdll__nor4b_2".
+Reading "sky130_fd_sc_hdll__nor4b_4".
+Reading "sky130_fd_sc_hdll__nor4bb_1".
+Reading "sky130_fd_sc_hdll__nor4bb_2".
+Reading "sky130_fd_sc_hdll__nor4bb_4".
+Reading "sky130_fd_sc_hdll__o211a_1".
+Reading "sky130_fd_sc_hdll__o211a_2".
+Reading "sky130_fd_sc_hdll__o211a_4".
+Reading "sky130_fd_sc_hdll__o211ai_1".
+Reading "sky130_fd_sc_hdll__o211ai_2".
+Reading "sky130_fd_sc_hdll__o211ai_4".
+Reading "sky130_fd_sc_hdll__o21a_1".
+Reading "sky130_fd_sc_hdll__o21a_2".
+Reading "sky130_fd_sc_hdll__o21a_4".
+Reading "sky130_fd_sc_hdll__o21ai_1".
+Reading "sky130_fd_sc_hdll__o21ai_2".
+Reading "sky130_fd_sc_hdll__o21ai_4".
+Reading "sky130_fd_sc_hdll__o21ba_1".
+Reading "sky130_fd_sc_hdll__o21ba_2".
+Reading "sky130_fd_sc_hdll__o21ba_4".
+Reading "sky130_fd_sc_hdll__o21bai_1".
+Reading "sky130_fd_sc_hdll__o21bai_2".
+Reading "sky130_fd_sc_hdll__o21bai_4".
+Reading "sky130_fd_sc_hdll__o221a_1".
+Reading "sky130_fd_sc_hdll__o221a_2".
+Reading "sky130_fd_sc_hdll__o221a_4".
+Reading "sky130_fd_sc_hdll__o221ai_1".
+Reading "sky130_fd_sc_hdll__o221ai_2".
+Reading "sky130_fd_sc_hdll__o221ai_4".
+Reading "sky130_fd_sc_hdll__o22a_1".
+Reading "sky130_fd_sc_hdll__o22a_2".
+Reading "sky130_fd_sc_hdll__o22a_4".
+Reading "sky130_fd_sc_hdll__o22ai_1".
+Reading "sky130_fd_sc_hdll__o22ai_2".
+Reading "sky130_fd_sc_hdll__o22ai_4".
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+Reading "sky130_fd_sc_hdll__o2bb2a_1".
+Reading "sky130_fd_sc_hdll__o2bb2a_2".
+Reading "sky130_fd_sc_hdll__o2bb2a_4".
+Reading "sky130_fd_sc_hdll__o2bb2ai_1".
+Reading "sky130_fd_sc_hdll__o2bb2ai_2".
+Reading "sky130_fd_sc_hdll__o2bb2ai_4".
+Reading "sky130_fd_sc_hdll__o31ai_1".
+Reading "sky130_fd_sc_hdll__o31ai_2".
+Reading "sky130_fd_sc_hdll__o31ai_4".
+Reading "sky130_fd_sc_hdll__o32ai_1".
+Reading "sky130_fd_sc_hdll__o32ai_2".
+Reading "sky130_fd_sc_hdll__o32ai_4".
+Reading "sky130_fd_sc_hdll__or2_1".
+Reading "sky130_fd_sc_hdll__or2_2".
+Reading "sky130_fd_sc_hdll__or2_4".
+Reading "sky130_fd_sc_hdll__or2b_1".
+Reading "sky130_fd_sc_hdll__or2b_2".
+Reading "sky130_fd_sc_hdll__or2b_4".
+Reading "sky130_fd_sc_hdll__or3_1".
+Reading "sky130_fd_sc_hdll__or3_2".
+Reading "sky130_fd_sc_hdll__or3_4".
+Reading "sky130_fd_sc_hdll__or3b_1".
+Reading "sky130_fd_sc_hdll__or3b_2".
+Reading "sky130_fd_sc_hdll__or3b_4".
+Reading "sky130_fd_sc_hdll__or4_1".
+Reading "sky130_fd_sc_hdll__or4_2".
+Reading "sky130_fd_sc_hdll__or4_4".
+Reading "sky130_fd_sc_hdll__or4b_1".
+Reading "sky130_fd_sc_hdll__or4b_2".
+Reading "sky130_fd_sc_hdll__or4b_4".
+Reading "sky130_fd_sc_hdll__or4bb_1".
+Reading "sky130_fd_sc_hdll__or4bb_2".
+Reading "sky130_fd_sc_hdll__or4bb_4".
+Reading "sky130_fd_sc_hdll__sdfbbp_1".
+Reading "sky130_fd_sc_hdll__sdfrtp_1".
+Reading "sky130_fd_sc_hdll__sdfrtn_1".
+Reading "sky130_fd_sc_hdll__sdfrbp_2".
+Reading "sky130_fd_sc_hdll__sdfrbp_1".
+Reading "sky130_fd_sc_hdll__sdfsbp_2".
+Reading "sky130_fd_sc_hdll__sdfsbp_1".
+Reading "sky130_fd_sc_hdll__sdfrtp_2".
+Reading "sky130_fd_sc_hdll__sdfxbp_1".
+Reading "sky130_fd_sc_hdll__sdfstp_4".
+Reading "sky130_fd_sc_hdll__sdfstp_2".
+Reading "sky130_fd_sc_hdll__sdfstp_1".
+Reading "sky130_fd_sc_hdll__sdfxtp_4".
+Reading "sky130_fd_sc_hdll__sdfxtp_2".
+Reading "sky130_fd_sc_hdll__sdfxtp_1".
+Reading "sky130_fd_sc_hdll__sdfxbp_2".
+Reading "sky130_fd_sc_hdll__sdlclkp_1".
+Reading "sky130_fd_sc_hdll__sdlclkp_2".
+Reading "sky130_fd_sc_hdll__sdlclkp_4".
+Reading "sky130_fd_sc_hdll__sedfxbp_1".
+Reading "sky130_fd_sc_hdll__sedfxbp_2".
+Reading "sky130_fd_sc_hdll__xnor2_1".
+Reading "sky130_fd_sc_hdll__xnor2_4".
+Reading "sky130_fd_sc_hdll__xnor2_2".
+Reading "sky130_fd_sc_hdll__xnor3_1".
+Reading "sky130_fd_sc_hdll__xnor3_2".
+Reading "sky130_fd_sc_hdll__xnor3_4".
+Reading "sky130_fd_sc_hdll__xor2_1".
+Reading "sky130_fd_sc_hdll__xor2_4".
+Reading "sky130_fd_sc_hdll__xor2_2".
+Reading "sky130_fd_sc_hdll__xor3_1".
+Reading "sky130_fd_sc_hdll__xor3_2".
+Reading "sky130_fd_sc_hdll__xor3_4".
+Reading "sky130_fd_sc_hdll__sdfrtp_4".
+Reading "sky130_fd_sc_hdll__inputiso0n_1".
+Reading "sky130_fd_sc_hdll__inputiso0p_1".
+Reading "sky130_fd_sc_hdll__inputiso1n_1".
+Reading "sky130_fd_sc_hdll__inputiso1p_1".
+Reading "sky130_fd_sc_hdll__isobufsrc_1".
+Reading "sky130_fd_sc_hdll__isobufsrc_2".
+Reading "sky130_fd_sc_hdll__isobufsrc_4".
+Reading "sky130_fd_sc_hdll__isobufsrc_8".
+Reading "sky130_fd_sc_hdll__isobufsrc_16".
+Reading "sky130_fd_sc_hdll__decap_8".
+Reading "sky130_fd_sc_hdll__decap_6".
+Reading "sky130_fd_sc_hdll__decap_4".
+Reading "sky130_fd_sc_hdll__decap_3".
+Reading "sky130_fd_sc_hdll__tap_1".
+Reading "sky130_fd_sc_hdll__fill_8".
+Reading "sky130_fd_sc_hdll__fill_4".
+Reading "sky130_fd_sc_hdll__fill_2".
+Reading "sky130_fd_sc_hdll__fill_1".
+Reading "sky130_fd_sc_hdll__decap_12".
+Reading "sky130_fd_sc_hdll__muxb8to1_1".
+Reading "sky130_fd_sc_hdll__muxb4to1_4".
+Reading "sky130_fd_sc_hdll__muxb4to1_2".
+Reading "sky130_fd_sc_hdll__muxb4to1_1".
+Reading "sky130_fd_sc_hdll__clkmux2_4".
+Reading "sky130_fd_sc_hdll__clkmux2_2".
+Reading "sky130_fd_sc_hdll__clkmux2_1".
+Reading "sky130_fd_sc_hdll__muxb8to1_2".
+Reading "sky130_fd_sc_hdll__muxb16to1_2".
+Reading "sky130_fd_sc_hdll__muxb16to1_1".
+Reading "sky130_fd_sc_hdll__muxb8to1_4".
+Reading "sky130_fd_sc_hdll__muxb16to1_4".
+Reading "sky130_fd_sc_hdll__tap".
+Reading "sky130_fd_sc_hdll__muxb".
+Reading LEF data from file /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/techlef/sky130_fd_sc_hdll__max.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+Reading LEF data from file /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/lef/sky130_fd_sc_hdll.lef.
+This action cannot be undone.
+LEF read: Processed 45727 lines.
+Reading DEF data from file output/cpu_top_routed.def.
+This action cannot be undone.
+  Processed 7 vias total.
+  Processed 2 non-default rules total.
+  Processed 65039 subcell instances total.
+  Processed 20 pins total.
+  Processed 2 special nets total.
+  Processed 28571 nets total.
+DEF read: Processed 511435 lines.
+   Copying output for cell sky130_fd_sc_hdll__fill_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__fill_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__fill_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__conb_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__buf_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__fill_8 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__dfrtp_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand2_6 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o21ai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkbuf_16 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor2_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__buf_6 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o211ai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__inputiso1p_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o221ai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand3_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__buf_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__bufinv_16 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkbuf_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkinv_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkinv_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a31o_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o32ai_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__inputiso0n_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__buf_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a31oi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkinvlp_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkinv_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__mux2i_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a21oi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a32o_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__inv_6 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a21o_8 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a21o_6 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__buf_12 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o211ai_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o21ba_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__diode_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__inv_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a211oi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkinv_12 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkbuf_12 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand3b_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor3_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__buf_16 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o22ai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor4_6 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o31ai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a32oi_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__and3_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a221oi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a32oi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o21a_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o2bb2ai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__inv_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a211oi_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o31ai_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor2_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__dfrtp_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand2_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkbuf_6 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor2_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor3_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__dlygate4sd3_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__inv_8 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o221ai_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor3_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__xor2_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a31oi_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__mux2_12 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a2bb2oi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__xnor2_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o21ai_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o32ai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o22ai_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__dfrtp_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a2bb2oi_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__inv_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o21ai_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__probec_p_8 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand2_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand4_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand3_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand2_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a221oi_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand3_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor4_8 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__isobufsrc_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__xnor2_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a22o_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand4b_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a211oi_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand2b_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__or2_6 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__mux2_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a21o_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__clkinvlp_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a21boi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__bufinv_8 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o31ai_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor4_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nor4_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a21boi_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__xor2_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o21bai_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__mux2i_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand2_8 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a22oi_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand2_12 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__mux2_16 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__o21ba_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__or2_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__and2_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__nand3b_4 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__a21oi_2 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__or2b_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Copying output for cell sky130_fd_sc_hdll__or3_1 from /root/Work/vlsi/pdks/pdk/sky130B/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+   Generating output for cell cpu_top
+TOTAL DRC ERRORS: 0
+"dir" isn't a valid extract option.  Type "extract help" for a list of valid options.
+Extracting sky130_fd_sc_hdll__fill_4 into sky130_fd_sc_hdll__fill_4.ext:
+Processing sky130_fd_sc_hdll__fill_4
+Extracting sky130_fd_sc_hdll__fill_2 into sky130_fd_sc_hdll__fill_2.ext:
+Processing sky130_fd_sc_hdll__fill_2
+Extracting sky130_fd_sc_hdll__fill_1 into sky130_fd_sc_hdll__fill_1.ext:
+Processing sky130_fd_sc_hdll__fill_1
+Extracting sky130_fd_sc_hdll__conb_1 into sky130_fd_sc_hdll__conb_1.ext:
+Processing sky130_fd_sc_hdll__conb_1
+Extracting sky130_fd_sc_hdll__buf_4 into sky130_fd_sc_hdll__buf_4.ext:
+Processing sky130_fd_sc_hdll__buf_4
+Extracting sky130_fd_sc_hdll__fill_8 into sky130_fd_sc_hdll__fill_8.ext:
+Processing sky130_fd_sc_hdll__fill_8
+Extracting sky130_fd_sc_hdll__dfrtp_1 into sky130_fd_sc_hdll__dfrtp_1.ext:
+Processing sky130_fd_sc_hdll__dfrtp_1
+Extracting sky130_fd_sc_hdll__nand2_6 into sky130_fd_sc_hdll__nand2_6.ext:
+Processing sky130_fd_sc_hdll__nand2_6
+Extracting sky130_fd_sc_hdll__o21ai_1 into sky130_fd_sc_hdll__o21ai_1.ext:
+Processing sky130_fd_sc_hdll__o21ai_1
+Extracting sky130_fd_sc_hdll__clkbuf_16 into sky130_fd_sc_hdll__clkbuf_16.ext:
+Processing sky130_fd_sc_hdll__clkbuf_16
+Extracting sky130_fd_sc_hdll__nor2_1 into sky130_fd_sc_hdll__nor2_1.ext:
+Processing sky130_fd_sc_hdll__nor2_1
+Extracting sky130_fd_sc_hdll__buf_6 into sky130_fd_sc_hdll__buf_6.ext:
+Processing sky130_fd_sc_hdll__buf_6
+Extracting sky130_fd_sc_hdll__o211ai_1 into sky130_fd_sc_hdll__o211ai_1.ext:
+Processing sky130_fd_sc_hdll__o211ai_1
+Extracting sky130_fd_sc_hdll__inputiso1p_1 into sky130_fd_sc_hdll__inputiso1p_1.ext:
+Processing sky130_fd_sc_hdll__inputiso1p_1
+Extracting sky130_fd_sc_hdll__o221ai_1 into sky130_fd_sc_hdll__o221ai_1.ext:
+Processing sky130_fd_sc_hdll__o221ai_1
+Extracting sky130_fd_sc_hdll__nand3_1 into sky130_fd_sc_hdll__nand3_1.ext:
+Processing sky130_fd_sc_hdll__nand3_1
+Extracting sky130_fd_sc_hdll__buf_2 into sky130_fd_sc_hdll__buf_2.ext:
+Processing sky130_fd_sc_hdll__buf_2
+Extracting sky130_fd_sc_hdll__bufinv_16 into sky130_fd_sc_hdll__bufinv_16.ext:
+Processing sky130_fd_sc_hdll__bufinv_16
+Extracting sky130_fd_sc_hdll__clkbuf_4 into sky130_fd_sc_hdll__clkbuf_4.ext:
+Processing sky130_fd_sc_hdll__clkbuf_4
+Extracting sky130_fd_sc_hdll__clkinv_1 into sky130_fd_sc_hdll__clkinv_1.ext:
+Processing sky130_fd_sc_hdll__clkinv_1
+Extracting sky130_fd_sc_hdll__clkinv_2 into sky130_fd_sc_hdll__clkinv_2.ext:
+Processing sky130_fd_sc_hdll__clkinv_2
+Extracting sky130_fd_sc_hdll__a31o_1 into sky130_fd_sc_hdll__a31o_1.ext:
+Processing sky130_fd_sc_hdll__a31o_1
+Extracting sky130_fd_sc_hdll__o32ai_2 into sky130_fd_sc_hdll__o32ai_2.ext:
+Processing sky130_fd_sc_hdll__o32ai_2
+Extracting sky130_fd_sc_hdll__inputiso0n_1 into sky130_fd_sc_hdll__inputiso0n_1.ext:
+Processing sky130_fd_sc_hdll__inputiso0n_1
+Extracting sky130_fd_sc_hdll__buf_1 into sky130_fd_sc_hdll__buf_1.ext:
+Processing sky130_fd_sc_hdll__buf_1
+Extracting sky130_fd_sc_hdll__a31oi_1 into sky130_fd_sc_hdll__a31oi_1.ext:
+Processing sky130_fd_sc_hdll__a31oi_1
+Extracting sky130_fd_sc_hdll__clkinvlp_4 into sky130_fd_sc_hdll__clkinvlp_4.ext:
+Processing sky130_fd_sc_hdll__clkinvlp_4
+Extracting sky130_fd_sc_hdll__clkinv_4 into sky130_fd_sc_hdll__clkinv_4.ext:
+Processing sky130_fd_sc_hdll__clkinv_4
+Extracting sky130_fd_sc_hdll__mux2i_1 into sky130_fd_sc_hdll__mux2i_1.ext:
+Processing sky130_fd_sc_hdll__mux2i_1
+Extracting sky130_fd_sc_hdll__a21oi_1 into sky130_fd_sc_hdll__a21oi_1.ext:
+Processing sky130_fd_sc_hdll__a21oi_1
+Extracting sky130_fd_sc_hdll__a32o_1 into sky130_fd_sc_hdll__a32o_1.ext:
+Processing sky130_fd_sc_hdll__a32o_1
+Extracting sky130_fd_sc_hdll__inv_6 into sky130_fd_sc_hdll__inv_6.ext:
+Processing sky130_fd_sc_hdll__inv_6
+Extracting sky130_fd_sc_hdll__a21o_8 into sky130_fd_sc_hdll__a21o_8.ext:
+Processing sky130_fd_sc_hdll__a21o_8
+Extracting sky130_fd_sc_hdll__a21o_6 into sky130_fd_sc_hdll__a21o_6.ext:
+Processing sky130_fd_sc_hdll__a21o_6
+Extracting sky130_fd_sc_hdll__buf_12 into sky130_fd_sc_hdll__buf_12.ext:
+Processing sky130_fd_sc_hdll__buf_12
+Extracting sky130_fd_sc_hdll__o211ai_2 into sky130_fd_sc_hdll__o211ai_2.ext:
+Processing sky130_fd_sc_hdll__o211ai_2
+Extracting sky130_fd_sc_hdll__o21ba_1 into sky130_fd_sc_hdll__o21ba_1.ext:
+Processing sky130_fd_sc_hdll__o21ba_1
+Extracting sky130_fd_sc_hdll__diode_2 into sky130_fd_sc_hdll__diode_2.ext:
+Processing sky130_fd_sc_hdll__diode_2
+sky130_fd_sc_hdll__diode_2: 1 warning
+Extracting sky130_fd_sc_hdll__inv_1 into sky130_fd_sc_hdll__inv_1.ext:
+Processing sky130_fd_sc_hdll__inv_1
+Extracting sky130_fd_sc_hdll__a211oi_1 into sky130_fd_sc_hdll__a211oi_1.ext:
+Processing sky130_fd_sc_hdll__a211oi_1
+Extracting sky130_fd_sc_hdll__clkinv_12 into sky130_fd_sc_hdll__clkinv_12.ext:
+Processing sky130_fd_sc_hdll__clkinv_12
+Extracting sky130_fd_sc_hdll__clkbuf_12 into sky130_fd_sc_hdll__clkbuf_12.ext:
+Processing sky130_fd_sc_hdll__clkbuf_12
+Extracting sky130_fd_sc_hdll__nand3b_1 into sky130_fd_sc_hdll__nand3b_1.ext:
+Processing sky130_fd_sc_hdll__nand3b_1
+Extracting sky130_fd_sc_hdll__nor3_1 into sky130_fd_sc_hdll__nor3_1.ext:
+Processing sky130_fd_sc_hdll__nor3_1
+Extracting sky130_fd_sc_hdll__buf_16 into sky130_fd_sc_hdll__buf_16.ext:
+Processing sky130_fd_sc_hdll__buf_16
+Extracting sky130_fd_sc_hdll__o22ai_1 into sky130_fd_sc_hdll__o22ai_1.ext:
+Processing sky130_fd_sc_hdll__o22ai_1
+Extracting sky130_fd_sc_hdll__nor4_6 into sky130_fd_sc_hdll__nor4_6.ext:
+Processing sky130_fd_sc_hdll__nor4_6
+Extracting sky130_fd_sc_hdll__o31ai_1 into sky130_fd_sc_hdll__o31ai_1.ext:
+Processing sky130_fd_sc_hdll__o31ai_1
+Extracting sky130_fd_sc_hdll__a32oi_2 into sky130_fd_sc_hdll__a32oi_2.ext:
+Processing sky130_fd_sc_hdll__a32oi_2
+Extracting sky130_fd_sc_hdll__and3_1 into sky130_fd_sc_hdll__and3_1.ext:
+Processing sky130_fd_sc_hdll__and3_1
+Extracting sky130_fd_sc_hdll__a221oi_1 into sky130_fd_sc_hdll__a221oi_1.ext:
+Processing sky130_fd_sc_hdll__a221oi_1
+Extracting sky130_fd_sc_hdll__a32oi_1 into sky130_fd_sc_hdll__a32oi_1.ext:
+Processing sky130_fd_sc_hdll__a32oi_1
+Extracting sky130_fd_sc_hdll__o21a_1 into sky130_fd_sc_hdll__o21a_1.ext:
+Processing sky130_fd_sc_hdll__o21a_1
+Extracting sky130_fd_sc_hdll__o2bb2ai_1 into sky130_fd_sc_hdll__o2bb2ai_1.ext:
+Processing sky130_fd_sc_hdll__o2bb2ai_1
+Extracting sky130_fd_sc_hdll__inv_2 into sky130_fd_sc_hdll__inv_2.ext:
+Processing sky130_fd_sc_hdll__inv_2
+Extracting sky130_fd_sc_hdll__a211oi_2 into sky130_fd_sc_hdll__a211oi_2.ext:
+Processing sky130_fd_sc_hdll__a211oi_2
+Extracting sky130_fd_sc_hdll__o31ai_4 into sky130_fd_sc_hdll__o31ai_4.ext:
+Processing sky130_fd_sc_hdll__o31ai_4
+Extracting sky130_fd_sc_hdll__nor2_2 into sky130_fd_sc_hdll__nor2_2.ext:
+Processing sky130_fd_sc_hdll__nor2_2
+Extracting sky130_fd_sc_hdll__dfrtp_4 into sky130_fd_sc_hdll__dfrtp_4.ext:
+Processing sky130_fd_sc_hdll__dfrtp_4
+Extracting sky130_fd_sc_hdll__nand2_1 into sky130_fd_sc_hdll__nand2_1.ext:
+Processing sky130_fd_sc_hdll__nand2_1
+Extracting sky130_fd_sc_hdll__clkbuf_6 into sky130_fd_sc_hdll__clkbuf_6.ext:
+Processing sky130_fd_sc_hdll__clkbuf_6
+Extracting sky130_fd_sc_hdll__nor2_4 into sky130_fd_sc_hdll__nor2_4.ext:
+Processing sky130_fd_sc_hdll__nor2_4
+Extracting sky130_fd_sc_hdll__nor3_2 into sky130_fd_sc_hdll__nor3_2.ext:
+Processing sky130_fd_sc_hdll__nor3_2
+Extracting sky130_fd_sc_hdll__dlygate4sd3_1 into sky130_fd_sc_hdll__dlygate4sd3_1.ext:
+Processing sky130_fd_sc_hdll__dlygate4sd3_1
+Extracting sky130_fd_sc_hdll__inv_8 into sky130_fd_sc_hdll__inv_8.ext:
+Processing sky130_fd_sc_hdll__inv_8
+Extracting sky130_fd_sc_hdll__o221ai_2 into sky130_fd_sc_hdll__o221ai_2.ext:
+Processing sky130_fd_sc_hdll__o221ai_2
+Extracting sky130_fd_sc_hdll__nor3_4 into sky130_fd_sc_hdll__nor3_4.ext:
+Processing sky130_fd_sc_hdll__nor3_4
+Extracting sky130_fd_sc_hdll__xor2_1 into sky130_fd_sc_hdll__xor2_1.ext:
+Processing sky130_fd_sc_hdll__xor2_1
+Extracting sky130_fd_sc_hdll__a31oi_2 into sky130_fd_sc_hdll__a31oi_2.ext:
+Processing sky130_fd_sc_hdll__a31oi_2
+Extracting sky130_fd_sc_hdll__mux2_12 into sky130_fd_sc_hdll__mux2_12.ext:
+Processing sky130_fd_sc_hdll__mux2_12
+Extracting sky130_fd_sc_hdll__a2bb2oi_1 into sky130_fd_sc_hdll__a2bb2oi_1.ext:
+Processing sky130_fd_sc_hdll__a2bb2oi_1
+Extracting sky130_fd_sc_hdll__xnor2_1 into sky130_fd_sc_hdll__xnor2_1.ext:
+Processing sky130_fd_sc_hdll__xnor2_1
+Extracting sky130_fd_sc_hdll__o21ai_2 into sky130_fd_sc_hdll__o21ai_2.ext:
+Processing sky130_fd_sc_hdll__o21ai_2
+Extracting sky130_fd_sc_hdll__o32ai_1 into sky130_fd_sc_hdll__o32ai_1.ext:
+Processing sky130_fd_sc_hdll__o32ai_1
+Extracting sky130_fd_sc_hdll__o22ai_2 into sky130_fd_sc_hdll__o22ai_2.ext:
+Processing sky130_fd_sc_hdll__o22ai_2
+Extracting sky130_fd_sc_hdll__dfrtp_2 into sky130_fd_sc_hdll__dfrtp_2.ext:
+Processing sky130_fd_sc_hdll__dfrtp_2
+Extracting sky130_fd_sc_hdll__a2bb2oi_2 into sky130_fd_sc_hdll__a2bb2oi_2.ext:
+Processing sky130_fd_sc_hdll__a2bb2oi_2
+Extracting sky130_fd_sc_hdll__inv_4 into sky130_fd_sc_hdll__inv_4.ext:
+Processing sky130_fd_sc_hdll__inv_4
+Extracting sky130_fd_sc_hdll__o21ai_4 into sky130_fd_sc_hdll__o21ai_4.ext:
+Processing sky130_fd_sc_hdll__o21ai_4
+Extracting sky130_fd_sc_hdll__probec_p_8 into sky130_fd_sc_hdll__probec_p_8.ext:
+Processing sky130_fd_sc_hdll__probec_p_8
+Extracting sky130_fd_sc_hdll__nand2_2 into sky130_fd_sc_hdll__nand2_2.ext:
+Processing sky130_fd_sc_hdll__nand2_2
+Extracting sky130_fd_sc_hdll__nand4_1 into sky130_fd_sc_hdll__nand4_1.ext:
+Processing sky130_fd_sc_hdll__nand4_1
+Extracting sky130_fd_sc_hdll__nand3_2 into sky130_fd_sc_hdll__nand3_2.ext:
+Processing sky130_fd_sc_hdll__nand3_2
+Extracting sky130_fd_sc_hdll__nand2_4 into sky130_fd_sc_hdll__nand2_4.ext:
+Processing sky130_fd_sc_hdll__nand2_4
+Extracting sky130_fd_sc_hdll__a221oi_2 into sky130_fd_sc_hdll__a221oi_2.ext:
+Processing sky130_fd_sc_hdll__a221oi_2
+Extracting sky130_fd_sc_hdll__nand3_4 into sky130_fd_sc_hdll__nand3_4.ext:
+Processing sky130_fd_sc_hdll__nand3_4
+Extracting sky130_fd_sc_hdll__nor4_8 into sky130_fd_sc_hdll__nor4_8.ext:
+Processing sky130_fd_sc_hdll__nor4_8
+Extracting sky130_fd_sc_hdll__isobufsrc_1 into sky130_fd_sc_hdll__isobufsrc_1.ext:
+Processing sky130_fd_sc_hdll__isobufsrc_1
+Extracting sky130_fd_sc_hdll__xnor2_2 into sky130_fd_sc_hdll__xnor2_2.ext:
+Processing sky130_fd_sc_hdll__xnor2_2
+Extracting sky130_fd_sc_hdll__a22o_1 into sky130_fd_sc_hdll__a22o_1.ext:
+Processing sky130_fd_sc_hdll__a22o_1
+Extracting sky130_fd_sc_hdll__nand4b_1 into sky130_fd_sc_hdll__nand4b_1.ext:
+Processing sky130_fd_sc_hdll__nand4b_1
+Extracting sky130_fd_sc_hdll__a211oi_4 into sky130_fd_sc_hdll__a211oi_4.ext:
+Processing sky130_fd_sc_hdll__a211oi_4
+Extracting sky130_fd_sc_hdll__nand2b_1 into sky130_fd_sc_hdll__nand2b_1.ext:
+Processing sky130_fd_sc_hdll__nand2b_1
+Extracting sky130_fd_sc_hdll__or2_6 into sky130_fd_sc_hdll__or2_6.ext:
+Processing sky130_fd_sc_hdll__or2_6
+Extracting sky130_fd_sc_hdll__mux2_1 into sky130_fd_sc_hdll__mux2_1.ext:
+Processing sky130_fd_sc_hdll__mux2_1
+Extracting sky130_fd_sc_hdll__a21o_1 into sky130_fd_sc_hdll__a21o_1.ext:
+Processing sky130_fd_sc_hdll__a21o_1
+Extracting sky130_fd_sc_hdll__clkinvlp_2 into sky130_fd_sc_hdll__clkinvlp_2.ext:
+Processing sky130_fd_sc_hdll__clkinvlp_2
+Extracting sky130_fd_sc_hdll__a21boi_1 into sky130_fd_sc_hdll__a21boi_1.ext:
+Processing sky130_fd_sc_hdll__a21boi_1
+Extracting sky130_fd_sc_hdll__bufinv_8 into sky130_fd_sc_hdll__bufinv_8.ext:
+Processing sky130_fd_sc_hdll__bufinv_8
+Extracting sky130_fd_sc_hdll__o31ai_2 into sky130_fd_sc_hdll__o31ai_2.ext:
+Processing sky130_fd_sc_hdll__o31ai_2
+Extracting sky130_fd_sc_hdll__nor4_1 into sky130_fd_sc_hdll__nor4_1.ext:
+Processing sky130_fd_sc_hdll__nor4_1
+Extracting sky130_fd_sc_hdll__nor4_2 into sky130_fd_sc_hdll__nor4_2.ext:
+Processing sky130_fd_sc_hdll__nor4_2
+Extracting sky130_fd_sc_hdll__a21boi_2 into sky130_fd_sc_hdll__a21boi_2.ext:
+Processing sky130_fd_sc_hdll__a21boi_2
+Extracting sky130_fd_sc_hdll__xor2_2 into sky130_fd_sc_hdll__xor2_2.ext:
+Processing sky130_fd_sc_hdll__xor2_2
+Extracting sky130_fd_sc_hdll__o21bai_1 into sky130_fd_sc_hdll__o21bai_1.ext:
+Processing sky130_fd_sc_hdll__o21bai_1
+Extracting sky130_fd_sc_hdll__mux2i_2 into sky130_fd_sc_hdll__mux2i_2.ext:
+Processing sky130_fd_sc_hdll__mux2i_2
+Extracting sky130_fd_sc_hdll__nand2_8 into sky130_fd_sc_hdll__nand2_8.ext:
+Processing sky130_fd_sc_hdll__nand2_8
+Extracting sky130_fd_sc_hdll__a22oi_1 into sky130_fd_sc_hdll__a22oi_1.ext:
+Processing sky130_fd_sc_hdll__a22oi_1
+Extracting sky130_fd_sc_hdll__nand2_12 into sky130_fd_sc_hdll__nand2_12.ext:
+Processing sky130_fd_sc_hdll__nand2_12
+Extracting sky130_fd_sc_hdll__mux2_16 into sky130_fd_sc_hdll__mux2_16.ext:
+Processing sky130_fd_sc_hdll__mux2_16
+Extracting sky130_fd_sc_hdll__o21ba_2 into sky130_fd_sc_hdll__o21ba_2.ext:
+Processing sky130_fd_sc_hdll__o21ba_2
+Extracting sky130_fd_sc_hdll__or2_1 into sky130_fd_sc_hdll__or2_1.ext:
+Processing sky130_fd_sc_hdll__or2_1
+Extracting sky130_fd_sc_hdll__and2_4 into sky130_fd_sc_hdll__and2_4.ext:
+Processing sky130_fd_sc_hdll__and2_4
+Extracting sky130_fd_sc_hdll__nand3b_4 into sky130_fd_sc_hdll__nand3b_4.ext:
+Processing sky130_fd_sc_hdll__nand3b_4
+Extracting sky130_fd_sc_hdll__a21oi_2 into sky130_fd_sc_hdll__a21oi_2.ext:
+Processing sky130_fd_sc_hdll__a21oi_2
+Extracting sky130_fd_sc_hdll__or2b_1 into sky130_fd_sc_hdll__or2b_1.ext:
+Processing sky130_fd_sc_hdll__or2b_1
+Extracting sky130_fd_sc_hdll__or3_1 into sky130_fd_sc_hdll__or3_1.ext:
+Processing sky130_fd_sc_hdll__or3_1
+Extracting cpu_top into cpu_top.ext:
+Processing cpu_top
+Created database crash recovery file /tmp//MAG11253.K0lapM
+Total of 1 warning.
+Warning: multiple input files specified; ignoring "prefix"
+exttospice finished.
