@@ -5,13 +5,15 @@ set SDC_PATH "../RTL/constraints/cpu_top.sdc"
 set PDK_ROOT "/root/Work/vlsi/pdks/pdk/sky130B/libs.ref"
 set TECH_LEF  "${PDK_ROOT}/sky130_fd_sc_hdll/techlef/sky130_fd_sc_hdll__max.tlef"
 set CELL_LEF "${PDK_ROOT}/sky130_fd_sc_hdll/lef/sky130_fd_sc_hdll.lef"
-set LIB_FILE  "${PDK_ROOT}/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ss_100C_1v60.lib"
+set LIB_FILE_SLW  "${PDK_ROOT}/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ss_100C_1v60.lib"
+set LIB_FILE_FST  "${PDK_ROOT}/sky130_fd_sc_hdll/lib/sky130_fd_sc_hdll__ff_n40C_1v95.lib"
 
 # --- Read LEFs ---
 read_lef $TECH_LEF
 read_lef $CELL_LEF
 
-read_liberty $LIB_FILE
+read_liberty -min $LIB_FILE_FST
+read_liberty -max $LIB_FILE_SLW
 
 read_verilog ${SYNTH_DIR}/output/slow/${TOP}_slow_netlist.v
 link_design $TOP
